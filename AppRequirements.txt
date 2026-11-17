@@ -1,0 +1,422 @@
+# Project: Morse Translator Pro (Android App)
+
+You are an autonomous software engineer tasked with designing, building, testing, deploying, publishing, marketing, and maintaining a production\-ready Android application.
+
+## Objective
+
+Create a modern Android mobile application called **Morse Translator Pro** that allows users to:
+
+1. Convert text into Morse code.
+2. Play Morse code through: 
+    - Device flashlight (LED torch).
+    - Audible beeps/speaker sounds.
+    - Vibration patterns.
+3. Decode Morse code received via: 
+    - Camera light detection (flashing lights).
+    - Microphone audio detection (beeping sounds).
+4. Save, share, and export translations.
+5. Operate offline without an internet connection.
+
+The final goal is to publish the application on Google Play Store, make the source code public on GitHub, and launch an initial marketing campaign.
+
+---
+
+# Technical Requirements
+
+## Platform
+
+- Native Android application
+- Kotlin
+- Jetpack Compose UI
+- MVVM architecture
+- Material Design 3
+- Android SDK latest stable version
+- Target Android 12\+
+
+## Features
+
+### 1\. Text to Morse
+
+User inputs text.
+
+System converts it into valid international Morse Code.
+
+Display:
+
+- Original text
+- Morse code output
+
+Example:
+
+HELLO
+
+.... . .\-.. .\-.. \-\-\-
+
+### 2\. Morse Playback
+
+Add controls:
+
+- Play
+- Pause
+- Stop
+- Repeat
+
+Playback methods:
+
+#### Flashlight Mode
+
+Use camera flash LED.
+
+Morse timing rules:
+
+- Dot = 1 unit
+- Dash = 3 units
+- Symbol gap = 1 unit
+- Letter gap = 3 units
+- Word gap = 7 units
+
+Allow speed adjustment:
+
+- Slow
+- Medium
+- Fast
+- Custom WPM (Words Per Minute)
+
+#### Audio Mode
+
+Generate Morse beeps.
+
+Settings:
+
+- Frequency selection (400Hz–1200Hz)
+- Volume control
+- Speed control
+
+#### Vibration Mode
+
+Translate Morse patterns into vibration sequences.
+
+---
+
+### 3\. Camera Morse Decoder
+
+Use CameraX.
+
+Requirements:
+
+- Detect flashing lights in real time.
+- Determine Morse timing.
+- Convert flashes into Morse symbols.
+- Convert Morse into text.
+- Display confidence score.
+- Show live decoded text.
+
+Should work with:
+
+- Another phone flashlight
+- LED signals
+- Flashing Morse transmitters
+
+---
+
+### 4\. Microphone Morse Decoder
+
+Use Android microphone.
+
+Requirements:
+
+- Detect beeps.
+- Use DSP/audio processing techniques.
+- Filter background noise.
+- Convert audio patterns into Morse.
+- Convert Morse into readable text.
+- Display live decoding output.
+
+Should support:
+
+- Real\-time decoding
+- Recorded audio decoding
+
+---
+
+### 5\. History
+
+Store locally using Room Database.
+
+Save:
+
+- Timestamp
+- Original message
+- Morse code
+- Playback settings
+
+Include:
+
+- Search
+- Delete
+- Favorites
+
+---
+
+### 6\. Sharing
+
+Share decoded or encoded messages through:
+
+- SMS
+- WhatsApp
+- Telegram
+- Email
+- Copy to clipboard
+
+---
+
+### 7\. Accessibility
+
+Include:
+
+- Dark mode
+- Screen reader compatibility
+- Large text support
+- Haptic feedback options
+
+---
+
+# UI/UX Requirements
+
+Design a professional modern interface.
+
+Screens:
+
+1. Home
+2. Text → Morse
+3. Morse → Text
+4. Flashlight Transmitter
+5. Audio Transmitter
+6. Camera Decoder
+7. Audio Decoder
+8. History
+9. Settings
+10. About
+
+Use:
+
+- Material 3
+- Smooth animations
+- Responsive layouts
+- Modern icons
+
+---
+
+# Quality Requirements
+
+Create:
+
+- Unit tests
+- Integration tests
+- UI tests
+
+Target:
+
+- 80% test coverage
+
+Perform:
+
+- Lint checks
+- Static analysis
+- Performance testing
+
+---
+
+# GitHub Requirements
+
+Create a public GitHub repository.
+
+Repository name:
+
+morse\-translator\-pro
+
+Requirements:
+
+- Commit code incrementally
+- Meaningful commit messages
+- Proper README
+- Architecture diagrams
+- Screenshots
+- Usage examples
+- License (MIT)
+
+Enable:
+
+- GitHub Actions CI/CD
+- Automated Android builds
+
+Connect repository to my GitHub account.
+
+Push all source code.
+
+Make repository public.
+
+---
+
+# Google Play Store Requirements
+
+Prepare complete release package:
+
+- Signed AAB build
+- Feature graphic
+- App icon
+- Screenshots
+- Privacy Policy
+- Store listing
+- Short description
+- Full description
+- Keywords
+- Content rating
+- Data Safety form
+
+Publish application to Google Play Store production track using my developer account credentials when provided.
+
+App Name: Morse Translator Pro
+
+Category: Tools
+
+Pricing: Free with optional Pro version
+
+---
+
+# Monetization
+
+Implement:
+
+Free version:
+
+- Core functionality
+
+Pro version:
+
+- Advanced decoding
+- Unlimited history
+- Advanced customization
+- No ads
+
+Support:
+
+- Google Play Billing
+
+Optional:
+
+- One\-time purchase
+- Subscription
+
+---
+
+# Marketing Campaign
+
+Create a complete marketing package.
+
+## Website
+
+Build and publish:
+
+morsetranslatorpro.com
+
+Include:
+
+- Landing page
+- Features
+- Screenshots
+- FAQ
+- Contact form
+- Privacy policy
+
+---
+
+## App Store Optimization (ASO)
+
+Perform:
+
+- Keyword research
+- Store optimization
+- Competitor analysis
+
+Competitors include:
+
+- Morse Code Translator
+- Morse Mania
+- Morse Code Agent
+- Morse Expert
+
+---
+
+## Content Marketing
+
+Create:
+
+- 10 SEO blog posts
+- 20 social media posts
+- Product Hunt launch page
+- Reddit launch plan
+- Hacker News launch plan
+- LinkedIn announcement
+
+---
+
+## Social Media
+
+Create branded assets for:
+
+- X
+- Facebook
+- Instagram
+- TikTok
+- LinkedIn
+
+Generate:
+
+- Images
+- Captions
+- Hashtags
+
+---
+
+## Launch Plan
+
+Produce:
+
+### Pre\-launch
+
+- Landing page
+- Beta testing
+- Closed testing group
+
+### Launch
+
+- Google Play publication
+- Product Hunt launch
+- Social campaign
+
+### Post\-launch
+
+- User acquisition strategy
+- Review acquisition strategy
+- Retention campaign
+
+---
+
+# Deliverables
+
+Provide:
+
+1. Fully working Android application.
+2. Public GitHub repository.
+3. Published Google Play Store listing.
+4. Marketing website.
+5. Marketing assets.
+6. Release documentation.
+7. User guide.
+8. Technical documentation.
+9. CI/CD pipeline.
+10. Final project report.
+
+Work autonomously until all deliverables are completed. Request credentials only when needed for GitHub, Google Play Console, domain registration, payment systems, or publication steps.
+
