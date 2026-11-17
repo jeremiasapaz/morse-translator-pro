@@ -7,7 +7,7 @@ flashing lights or beeps back into text in real time.
 Built with **Kotlin**, **Jetpack Compose**, **Material 3** and an **MVVM**
 architecture. Works with no internet connection and no account.
 
-![CI](https://github.com/OWNER/morse-translator-pro/actions/workflows/android.yml/badge.svg)
+![CI](https://github.com/jeremiasapaz/morse-translator-pro/actions/workflows/android.yml/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > Replace `OWNER` in the badge URLs with your GitHub username/org after pushing.
