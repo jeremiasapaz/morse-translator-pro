@@ -1,9 +1,20 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
 }
+
+// Release signing is read from a git-ignored keystore.properties in the project
+// root. When it's absent (e.g. CI, or before a keystore exists), release builds
+// fall back to unsigned output and debug builds are unaffected. See docs/RELEASE.md.
+val keystorePropsFile = rootProject.file("keystore.properties")
+val keystoreProps = Properties().apply {
+    if (keystorePropsFile.exists()) keystorePropsFile.inputStream().use { load(it) }
+}
+val hasSigning = keystorePropsFile.exists()
 
 android {
     namespace = "com.morsetranslatorpro.app"
@@ -22,6 +33,17 @@ android {
         ksp { arg("room.schemaLocation", "$projectDir/schemas") }
     }
 
+    signingConfigs {
+        if (hasSigning) {
+            create("release") {
+                storeFile = file(keystoreProps["storeFile"] as String)
+                storePassword = keystoreProps["storePassword"] as String
+                keyAlias = keystoreProps["keyAlias"] as String
+                keyPassword = keystoreProps["keyPassword"] as String
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = true
@@ -30,6 +52,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            if (hasSigning) signingConfig = signingConfigs.getByName("release")
         }
         debug {
             applicationIdSuffix = ".debug"
