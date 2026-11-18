@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.roborazzi)
 }
 
 // Release signing is read from a git-ignored keystore.properties in the project
@@ -88,6 +89,21 @@ android {
     }
 }
 
+// Screenshot tests (Robolectric + Roborazzi) are heavier and only needed when
+// (re)generating marketing screenshots. Exclude them from normal test runs / CI
+// unless -Pscreenshots is passed, e.g. `./gradlew recordRoborazziDebug -Pscreenshots`.
+tasks.withType<Test>().configureEach {
+    if (!project.hasProperty("screenshots")) {
+        exclude("**/screenshots/**")
+    }
+    // On corporate Windows machines behind a TLS-intercepting proxy, the default
+    // JVM trust store can't validate Maven mirror certs that Robolectric hits at
+    // runtime. Use the Windows cert store there. No-op/!skipped on Linux CI.
+    if (System.getProperty("os.name").startsWith("Windows")) {
+        systemProperty("javax.net.ssl.trustStoreType", "WINDOWS-ROOT")
+    }
+}
+
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -125,6 +141,14 @@ dependencies {
     testImplementation(libs.turbine)
     testImplementation(libs.androidx.core.testing)
     testImplementation(libs.androidx.room.testing)
+    // Screenshot testing (JVM, no device needed)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.roborazzi)
+    testImplementation(libs.roborazzi.compose)
+    testImplementation(libs.roborazzi.junit.rule)
+    testImplementation(platform(libs.androidx.compose.bom))
+    testImplementation(libs.androidx.ui.test.junit4)
+    debugImplementation(libs.androidx.ui.test.manifest)
 
     // Instrumented / UI testing
     androidTestImplementation(libs.androidx.junit)

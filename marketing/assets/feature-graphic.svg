@@ -17,8 +17,8 @@
     <circle cx="404" cy="90" r="14"/>
   </g>
 
-  <text x="64" y="250" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="78" font-weight="700" fill="#FFFFFF">Morse Translator Pro</text>
-  <text x="66" y="318" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="38" fill="#BBDEFB">Translate &#183; Transmit &#183; Decode &#8212; Offline</text>
+  <text x="64" y="240" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="68" font-weight="700" fill="#FFFFFF">Morse Translator Pro</text>
+  <text x="66" y="300" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="34" fill="#BBDEFB">Translate &#183; Transmit &#183; Decode &#8212; Offline</text>
 
   <!-- Feature chips -->
   <g font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="26" fill="#0D47A1">
@@ -30,8 +30,8 @@
     <text x="496" y="408">Camera decode</text>
   </g>
 
-  <!-- Large glyph on the right -->
-  <g fill="#FFFFFF" opacity="0.95" transform="translate(760,250)">
+  <!-- Large glyph, bottom-right, clear of the title -->
+  <g fill="#FFFFFF" opacity="0.95" transform="translate(735,400) scale(0.9)">
     <circle cx="0" cy="0" r="34"/>
     <rect x="64" y="-34" width="150" height="68" rx="34" fill="#FFC107"/>
     <circle cx="258" cy="0" r="34"/>

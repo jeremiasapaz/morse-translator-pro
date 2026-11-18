@@ -29,3 +29,6 @@ play-service-account*.json
 
 # OS
 Thumbs.db
+
+# Release artifacts (upload manually to Play Console; do not commit)
+release-artifacts/
