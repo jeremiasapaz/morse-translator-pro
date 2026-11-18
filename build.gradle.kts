@@ -5,14 +5,18 @@ plugins {
     alias(libs.plugins.ksp) apply false
 }
 
-// The project lives in a OneDrive-synced folder, which locks files in the build
-// directory during sync and breaks Gradle's incremental cleanup. Redirect all
-// build output to a non-synced location to avoid intermittent I/O failures.
-// Override with -PbuildOutRoot=/path if desired.
-val buildOutRoot: String =
+// The project may live in a OneDrive-synced folder, which locks files in the
+// build directory during sync and breaks Gradle's incremental cleanup. In that
+// case only, redirect build output to a non-synced location. On CI / normal
+// paths the default `<module>/build` is used so tooling (and artifact uploads)
+// find outputs where expected. Override explicitly with -PbuildOutRoot=/path.
+val buildOutRoot: String? =
     (findProperty("buildOutRoot") as String?)
-        ?: "${System.getProperty("user.home")}/.morse-build"
+        ?: if (rootDir.absolutePath.contains("OneDrive", ignoreCase = true))
+            "${System.getProperty("user.home")}/.morse-build" else null
 
-allprojects {
-    layout.buildDirectory.set(file("$buildOutRoot/${project.name}"))
+if (buildOutRoot != null) {
+    allprojects {
+        layout.buildDirectory.set(file("$buildOutRoot/${project.name}"))
+    }
 }
