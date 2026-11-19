@@ -67,8 +67,9 @@ Everyone
 
 ## Contact
 Email: support@morsetranslatorpro.com
-Website: https://morsetranslatorpro.com
-Privacy policy: https://morsetranslatorpro.com/privacy
+Website: https://jeremiasapaz.github.io/morse-translator-pro/ (custom domain: morsetranslatorpro.com once registered)
+Privacy policy: https://jeremiasapaz.github.io/morse-translator-pro/privacy.html
+  (this URL is live now and can be pasted directly into Play Console)
 
 ## Promo text ideas (short)
 - "Send Morse with light, sound or vibration — and decode it back. Offline."

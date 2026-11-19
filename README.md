@@ -1,5 +1,7 @@
 # Morse Translator Pro
 
+🌐 **Website:** https://jeremiasapaz.github.io/morse-translator-pro/
+
 A modern, fully offline Morse code toolkit for Android. Encode text to Morse,
 transmit it through the flashlight, speaker or vibration motor, and decode
 flashing lights or beeps back into text in real time.
