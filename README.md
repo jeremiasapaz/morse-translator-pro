@@ -111,8 +111,15 @@ The debug APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
 - [Architecture](docs/ARCHITECTURE.md)
 - [User guide](docs/USER_GUIDE.md)
 - [Release process](docs/RELEASE.md)
+- [Custom domain setup](docs/DOMAIN_SETUP.md)
 - [Privacy policy](docs/PRIVACY_POLICY.md)
 - [Project report](docs/PROJECT_REPORT.md)
+
+### Launch & marketing
+- [Closed testing kit](marketing/launch/closed-testing.md)
+- [Tester emails](marketing/launch/tester-email.md)
+- [Launch-day posts](marketing/launch/launch-day-posts.md)
+- [Launch plan](marketing/content/launch-plan.md) · [ASO](marketing/play-store/aso.md) · [Store listing](marketing/play-store/listing.md)
 
 ## Contributing
 
