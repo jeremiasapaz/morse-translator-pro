@@ -64,9 +64,9 @@ class BillingManager(
                         .build()
                 )
             ).build()
-        client.queryProductDetailsAsync(params) { result, details ->
-            if (result.responseCode == BillingClient.BillingResponseCode.OK) {
-                proProductDetails = details.firstOrNull()
+        client.queryProductDetailsAsync(params) { billingResult, productDetailsResult ->
+            if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
+                proProductDetails = productDetailsResult.productDetailsList.firstOrNull()
             }
         }
     }
@@ -90,8 +90,8 @@ class BillingManager(
         val params = QueryPurchasesParams.newBuilder()
             .setProductType(BillingClient.ProductType.INAPP)
             .build()
-        client.queryPurchasesAsync(params) { result, purchases ->
-            if (result.responseCode == BillingClient.BillingResponseCode.OK) {
+        client.queryPurchasesAsync(params) { billingResult, purchases ->
+            if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                 val owned = purchases.any {
                     it.products.contains(PRO_PRODUCT_ID) &&
                         it.purchaseState == Purchase.PurchaseState.PURCHASED
