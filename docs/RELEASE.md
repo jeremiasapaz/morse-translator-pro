@@ -68,7 +68,7 @@ android {
 1. Create the app in [Play Console](https://play.google.com/console):
    - App name: **Morse Translator Pro**
    - Default language: English (US)
-   - App or game: App; Free with in-app purchases.
+   - App or game: App; Free with in-app purchases; Ad-supported.
 2. Complete **App content**: privacy policy URL, data safety (see
    `marketing/play-store/data-safety.md`), ads (none), content rating
    questionnaire (expected: Everyone), target audience, news (no).

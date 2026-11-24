@@ -1,7 +1,9 @@
 package com.morsetranslatorpro.app.ui.viewmodel
 
+import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.morsetranslatorpro.app.ads.AdManager
 import com.morsetranslatorpro.app.core.MorseCode
 import com.morsetranslatorpro.app.data.db.HistoryEntity
 import com.morsetranslatorpro.app.data.prefs.AppSettings
@@ -42,7 +44,7 @@ class TranslatorViewModel(
         _output.value = ""
     }
 
-    fun save(encode: Boolean) {
+    fun save(encode: Boolean, activity: Activity? = null) {
         val original = if (encode) _input.value else _output.value
         val morse = if (encode) _output.value else _input.value
         if (original.isBlank() || morse.isBlank()) return
@@ -60,5 +62,6 @@ class TranslatorViewModel(
                 isPro = s.isPro
             )
         }
+        activity?.let { AdManager.showInterstitial(it) }
     }
 }

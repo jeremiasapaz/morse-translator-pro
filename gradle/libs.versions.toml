@@ -11,6 +11,8 @@ ksp = "2.0.21-1.0.28"
 datastore = "1.1.1"
 camerax = "1.4.1"
 billing = "7.1.1"
+admob = "23.6.0"
+guava = "33.3.1-android"
 coroutines = "1.9.0"
 junit = "4.13.2"
 androidxJunit = "1.2.1"
@@ -48,6 +50,8 @@ androidx-camera-camera2 = { group = "androidx.camera", name = "camera-camera2", 
 androidx-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camerax" }
 androidx-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax" }
 billing-ktx = { group = "com.android.billingclient", name = "billing-ktx", version.ref = "billing" }
+androidx-ads = { group = "com.google.android.gms", name = "play-services-ads", version.ref = "admob" }
+guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanistPermissions" }
 

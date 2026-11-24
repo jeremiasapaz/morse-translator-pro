@@ -45,8 +45,8 @@ WhatsApp, Telegram, email or copy to the clipboard.
 • No account, no internet required, no tracking.
 
 ★ FREE + PRO
-All core features are free. Upgrade to Pro (one-time purchase) for advanced
-decoding, unlimited history and extra customization — with no ads, ever.
+All core features are free. Upgrade to Pro (one-time purchase) to remove ads and
+unlock advanced decoding, unlimited history and extra customization.
 
 Perfect for amateur radio operators, scouts, students, preppers, teachers,
 puzzle fans and anyone learning Morse code. Learn CW, send secret messages,

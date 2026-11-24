@@ -5,9 +5,10 @@
 
 ## Summary
 
-Morse Translator Pro is designed to be **private by default**. All processing
-happens **on your device**. The app does not require an account, works fully
-offline, and does not collect, transmit or sell personal data.
+Morse Translator Pro is designed to be **private by default**. All core
+processing happens **on your device**. The app does not require an account and
+does not collect, transmit or sell personal data. The app displays ads via
+Google AdMob; see the Advertising section below for details.
 
 ## Information we do NOT collect
 
@@ -16,7 +17,7 @@ offline, and does not collect, transmit or sell personal data.
 - We do not record, store or transmit camera frames or microphone audio off the
   device. Camera and microphone input is analyzed in real time, in memory, only
   while a decoder screen is active, and is then discarded.
-- We do not use third-party analytics or advertising SDKs.
+- We do not use third-party analytics SDKs.
 
 ## Information stored locally on your device
 
@@ -28,6 +29,18 @@ offline, and does not collect, transmit or sell personal data.
 
 This data stays on your device and is included only in the Android system
 backup you control.
+
+## Advertising
+
+This app displays advertisements using **Google AdMob**. Google may use cookies
+and other technologies to serve ads based on your prior visits to this app or
+other websites. AdMob may collect certain information such as device identifiers,
+app usage, and location (general area) for ad targeting and measurement. This
+data collection is governed by Google's privacy policy, not ours.
+
+You can opt out of personalized ads by adjusting your device's Google Ad
+settings (https://adssettings.google.com). Note that opting out may affect the
+relevance of ads you see.
 
 ## Permissions
 

@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.morsetranslatorpro.app.ads.AdManager
 import com.morsetranslatorpro.app.data.prefs.AppSettings
 import com.morsetranslatorpro.app.data.prefs.ThemeMode
 import com.morsetranslatorpro.app.ui.MorseApp
@@ -19,6 +20,7 @@ class MainActivity : ComponentActivity() {
 
         val container = (application as MorseApplication).container
         container.billingManager.connect()
+        AdManager.loadInterstitial(this)
         val factory = ViewModelFactory(application, container)
 
         setContent {

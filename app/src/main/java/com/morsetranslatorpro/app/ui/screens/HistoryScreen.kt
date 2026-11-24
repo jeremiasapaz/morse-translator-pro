@@ -26,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.morsetranslatorpro.app.ads.BannerAdView
 import com.morsetranslatorpro.app.data.db.HistoryEntity
 import com.morsetranslatorpro.app.ui.viewmodel.HistoryViewModel
 import java.text.SimpleDateFormat
@@ -56,13 +57,14 @@ fun HistoryScreen(viewModel: HistoryViewModel, modifier: Modifier = Modifier) {
         if (items.isEmpty()) {
             Text("No saved translations yet.", style = MaterialTheme.typography.bodyMedium)
         }
-        LazyColumn(modifier = Modifier.fillMaxSize()) {
+        LazyColumn(modifier = Modifier.weight(1f)) {
             items(items, key = { it.id }) { item ->
                 HistoryRow(item, dateFormat.format(Date(item.timestamp)),
                     onFavorite = { viewModel.toggleFavorite(item) },
                     onDelete = { viewModel.delete(item) })
             }
         }
+        BannerAdView(modifier = Modifier.padding(top = 8.dp))
     }
 }
 

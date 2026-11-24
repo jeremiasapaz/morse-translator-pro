@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.morsetranslatorpro.app.ads.BannerAdView
 import com.morsetranslatorpro.app.core.MorseSpeed
 import com.morsetranslatorpro.app.ui.components.PlaybackControls
 import com.morsetranslatorpro.app.ui.components.SignalIndicator
@@ -140,5 +141,6 @@ private fun TransmitScaffold(
                 modifier = Modifier.fillMaxWidth()
             )
         }
+        BannerAdView(modifier = Modifier.padding(top = 16.dp))
     }
 }

@@ -133,6 +133,8 @@ dependencies {
 
     implementation(libs.accompanist.permissions)
     implementation(libs.billing.ktx)
+    implementation(libs.androidx.ads)
+    implementation(libs.guava)
 
     // Unit testing
     testImplementation(libs.junit)

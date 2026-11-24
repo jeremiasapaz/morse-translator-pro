@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.morsetranslatorpro.app.ads.BannerAdView
 import com.morsetranslatorpro.app.ui.navigation.Destination
 
 /** Home hub with a feature grid linking to each tool. */
@@ -42,7 +43,7 @@ fun HomeScreen(onNavigate: (Destination) -> Unit, modifier: Modifier = Modifier)
         )
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
-            modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
+            modifier = Modifier.fillMaxWidth().weight(1f).padding(top = 16.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
@@ -60,5 +61,6 @@ fun HomeScreen(onNavigate: (Destination) -> Unit, modifier: Modifier = Modifier)
                 }
             }
         }
+        BannerAdView(modifier = Modifier.padding(top = 16.dp))
     }
 }
