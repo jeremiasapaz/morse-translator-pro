@@ -66,8 +66,7 @@ Tools
 Everyone
 
 ## Contact
-Email: support@morsetranslatorpro.com
-Website: https://jeremiasapaz.github.io/morse-translator-pro/ (custom domain: morsetranslatorpro.com once registered)
+Website: https://jeremiasapaz.github.io/morse-translator-pro/
 Privacy policy: https://jeremiasapaz.github.io/morse-translator-pro/privacy.html
   (this URL is live now and can be pasted directly into Play Console)
 

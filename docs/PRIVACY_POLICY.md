@@ -71,4 +71,4 @@ notes and in this document's effective date.
 
 ## Contact
 
-Questions? Email **privacy@morsetranslatorpro.com**.
+Questions? Use the contact form on the website at https://jeremiasapaz.github.io/morse-translator-pro/
