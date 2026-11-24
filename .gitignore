@@ -24,6 +24,9 @@ keystore.properties
 *.pepk
 play-service-account*.json
 
+# Secrets documentation — contains sensitive keys
+SECRETS.md
+
 # Logs
 *.log
 
