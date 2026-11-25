@@ -105,11 +105,11 @@ fun MorseApp(factory: ViewModelFactory) {
                 }
                 composable(Destination.ENCODE.route) {
                     val vm: TranslatorViewModel = viewModel(factory = factory)
-                    EncodeScreen(vm)
+                    EncodeScreen(vm, onNavigate = { navController.navigate(it.route) })
                 }
                 composable(Destination.DECODE.route) {
                     val vm: TranslatorViewModel = viewModel(factory = factory)
-                    DecodeScreen(vm)
+                    DecodeScreen(vm, onNavigate = { navController.navigate(it.route) })
                 }
                 composable(Destination.FLASHLIGHT.route) {
                     val vm: TransmitViewModel = viewModel(factory = factory)
@@ -129,7 +129,7 @@ fun MorseApp(factory: ViewModelFactory) {
                 }
                 composable(Destination.HISTORY.route) {
                     val vm: HistoryViewModel = viewModel(factory = factory)
-                    HistoryScreen(vm)
+                    HistoryScreen(vm, onNavigate = { navController.navigate(it.route) })
                 }
                 composable(Destination.SETTINGS.route) {
                     val vm: SettingsViewModel = viewModel(factory = factory)
