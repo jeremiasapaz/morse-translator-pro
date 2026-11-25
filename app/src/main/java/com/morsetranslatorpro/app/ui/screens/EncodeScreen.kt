@@ -42,7 +42,7 @@ fun EncodeScreen(viewModel: TranslatorViewModel, modifier: Modifier = Modifier) 
             modifier = Modifier.fillMaxWidth()
         )
         Row(Modifier.padding(top = 12.dp)) {
-            Button(onClick = { viewModel.save(encode = true, activity) }) { Text(stringResource(R.string.save)) }
+            Button(onClick = { viewModel.save(encode = true, activity) }) { Text("Add to Favorites") }
             OutlinedButton(onClick = { viewModel.clear() }, modifier = Modifier.padding(start = 12.dp)) {
                 Text(stringResource(R.string.clear))
             }

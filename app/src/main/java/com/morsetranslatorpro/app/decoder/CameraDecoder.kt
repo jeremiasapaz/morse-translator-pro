@@ -17,8 +17,8 @@ class CameraDecoder(
 ) : ImageAnalysis.Analyzer {
 
     private val signalDecoder = SignalDecoder()
-    private val collector = PulseCollector(minTransitionMs = 40)
-    private val threshold = AdaptiveThreshold(marginFactor = 0.55)
+    private val collector = PulseCollector(minTransitionMs = 60)
+    private val threshold = AdaptiveThreshold(marginFactor = 0.7)
 
     fun reset() {
         collector.reset()
