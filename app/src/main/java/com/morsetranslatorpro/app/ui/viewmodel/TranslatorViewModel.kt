@@ -25,10 +25,10 @@ class TranslatorViewModel(
     private val settingsRepository: SettingsRepository
 ) : ViewModel() {
 
-    private val _input = MutableStateFlow("")
+    private val _input = MutableStateFlow("HELLO WORLD")
     val input: StateFlow<String> = _input.asStateFlow()
 
-    private val _output = MutableStateFlow("")
+    private val _output = MutableStateFlow(MorseCode.encode("HELLO WORLD"))
     val output: StateFlow<String> = _output.asStateFlow()
 
     val settings: StateFlow<AppSettings> = settingsRepository.settings
