@@ -50,10 +50,10 @@ Target: **≥12 "Installed" = ✓** sustained for 14 days.
 ## 4. Release notes (first closed build)
 
 ```
-v1.0.4 (closed test)
+v1.0.5 (closed test)
 Thanks for testing Morse Translator Pro! This build includes:
-• Text ↔ Morse translation
-• Transmit via flashlight, audio and vibration
+• Text ↔ Morse translation (with default text for quick testing)
+• Transmit via flashlight, audio and vibration (SOS pre-loaded)
 • Decode flashing lights (camera) and beeps (microphone)
 • History, sharing, dark mode and accessibility options
 • AdMob ads (banner + interstitial) — Pro upgrade removes ads
